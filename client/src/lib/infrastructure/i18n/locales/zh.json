@@ -1,0 +1,16 @@
+{
+    "common": {
+        "appName": "Biwa 点餐系统",
+        "actions": {
+            "add": "加入购物车",
+            "order": "下单",
+            "cancel": "取消"
+        }
+    },
+    "menu": {
+        "categories": {
+            "drinks": "特色饮品",
+            "foods": "美味主食"
+        }
+    }
+}

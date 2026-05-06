@@ -1,0 +1,25 @@
+{
+  "categories": [
+    { "id": "cat_1", "nameKey": "menu.categories.drinks", "sortOrder": 1 },
+    { "id": "cat_2", "nameKey": "menu.categories.foods", "sortOrder": 2 }
+  ],
+  "menu": [
+    {
+      "id": "1",
+      "categoryId": "cat_1",
+      "nameKey": "menu.items.latte",
+      "basePrice": 550,
+      "imageUrl": "https://placehold.co/150",
+      "isAvailable": true
+    },
+    {
+      "id": "2",
+      "categoryId": "cat_2",
+      "nameKey": "menu.items.burger",
+      "basePrice": 1200,
+      "imageUrl": "https://placehold.co/150",
+      "isAvailable": true
+    }
+  ],
+  "orders": []
+}

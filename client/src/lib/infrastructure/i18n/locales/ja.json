@@ -1,0 +1,53 @@
+{
+    "common": {
+        "appName": "美和食堂 (Biwa Restaurant)",
+        "currency": "円",
+        "taxIncluded": "税込",
+        "actions": {
+            "add": "カートに入れる",
+            "order": "注文を確定する",
+            "cancel": "キャンセル",
+            "back": "戻る",
+            "confirm": "確認",
+            "checkout": "お会計"
+        },
+        "status": {
+            "loading": "読み込み中...",
+            "empty": "データがありません",
+            "error": "エラーが発生しました"
+        }
+    },
+    "menu": {
+        "title": "メニュー",
+        "categories": {
+            "all": "すべて",
+            "drinks": "お飲み物",
+            "foods": "お食事",
+            "desserts": "デザート",
+            "recommend": "おすすめ"
+        },
+        "options": {
+            "selection": "選択してください",
+            "required": "必須"
+        }
+    },
+    "cart": {
+        "title": "ショッピングカート",
+        "total": "合計金額",
+        "quantity": "数量",
+        "itemsCount": "{count} 点のアイテム",
+        "empty": "カートは空です"
+    },
+    "order": {
+        "tableNumber": "テーブル番号",
+        "orderTime": "注文時刻",
+        "status": {
+            "pending": "準備中",
+            "confirmed": "確認済み",
+            "cooking": "調理中",
+            "served": "配膳済み",
+            "completed": "完了",
+            "cancelled": "キャンセル済み"
+        }
+    }
+}

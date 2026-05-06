@@ -1,0 +1,16 @@
+{
+    "common": {
+        "appName": "Biwa Restaurant",
+        "actions": {
+            "add": "Add to Cart",
+            "order": "Place Order",
+            "cancel": "Cancel"
+        }
+    },
+    "menu": {
+        "categories": {
+            "drinks": "Drinks",
+            "foods": "Main Dishes"
+        }
+    }
+}
