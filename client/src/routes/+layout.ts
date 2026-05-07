@@ -1,4 +1,5 @@
-import { register, init } from 'svelte-i18n';
+import { register, init, getLocaleFromPathname } from 'svelte-i18n';
+import { browser } from '$app/environment';
 
 export const ssr = false;
 // 强制预渲染根节点，以便生成 index.html
@@ -14,5 +15,6 @@ register('ja', () => import('$lib/infrastructure/i18n/locales/ja.json'));
 // 全局初始化 svelte-i18n，设置一个默认回退语言
 init({
     fallbackLocale: 'en',
-    initialLocale: 'en', // 初始语言，会被路由的 load 函数覆盖
+    initialLocale: browser ? getLocaleFromPathname(new RegExp(window.location.pathname)) ?? 'en' : 'en',
 });
+

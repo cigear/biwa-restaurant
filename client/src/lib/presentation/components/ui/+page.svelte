@@ -57,6 +57,7 @@
     };
 </script>
 
+<div class="flex h-screen w-full bg-white text-zinc-900 overflow-hidden">
 <!-- ✅ 核心修复：侧：菜单主区域 (添加滚动容器) -->
     <div class="flex-1 flex flex-col h-full overflow-y-auto custom-scrollbar">
         <!-- 头部标题 -->
