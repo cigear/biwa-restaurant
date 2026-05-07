@@ -63,7 +63,7 @@
         <!-- 头部标题 -->
         <header class="p-6 pb-2">
             <h1 class="text-3xl font-black tracking-tight text-zinc-900 italic">
-                {$_('menu.title')}
+                {$_('customer.menu.title')}
             </h1>
         </header>
 

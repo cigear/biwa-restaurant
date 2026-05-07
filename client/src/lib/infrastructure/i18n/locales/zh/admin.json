@@ -1,0 +1,33 @@
+{
+    "dashboard": "仪表盘",
+    "logout": "退出登录",
+    "viewDetail": "查看详情",
+    "recentOrders": "最近订单",
+    "seeAll": "查看全部",
+    "customer": "客户",
+    "total": "金额",
+    "status": "状态",
+    "quickActions": "快速操作",
+    "menu": {
+        "dashboard": "仪表盘",
+        "orders": "订单管理",
+        "menuItems": "菜品设置", 
+        "users": "员工管理",
+        "settings": "系统设置"
+    },
+    "stats": {
+        "newOrders": "新订单",
+        "revenue": "今日营收",
+        "customers": "总客户数",
+        "activeTables": "桌位占用"
+    },
+    "statusLabel": {
+        "completed": "已完成",
+        "pending": "待处理",
+        "processing": "制作中"
+    },
+    "actions": {
+        "addNewDish": "新增菜品",
+        "printReport": "打印报表"
+    }
+}

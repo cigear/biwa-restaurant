@@ -1,0 +1,23 @@
+{
+    "appName": "Biwa Restaurant",
+    "status": {
+        "loading": "loading..."
+    },
+    "actions": {
+        "add": "Add to Cart",
+        "order": "Place Order",
+        "cancel": "Cancel",
+        "login": "Login"
+    },
+    "languages": {
+        "zh": "Chinese",
+        "en": "English",
+        "ja": "Japanese"
+    },
+
+    "login": {
+        "description": "Please enter your account information to log in.",
+        "username": "Username / Email",
+        "password": "Password"
+    }
+}

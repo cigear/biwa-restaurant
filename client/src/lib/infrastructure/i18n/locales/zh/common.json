@@ -1,0 +1,15 @@
+{
+    "appName": "Biwa 点餐系统",
+    "actions": {
+        "add": "加入购物车",
+        "order": "下单",
+        "cancel": "取消",
+        "login": "登录"
+    },
+    "languages": {
+        "zh": "简体中文",
+        "en": "English",
+        "ja": "日本語"
+    }
+
+}

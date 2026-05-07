@@ -1,0 +1,9 @@
+{
+    "title": "キッチンディスプレイ",
+    "status": {
+        "new": "新規注文",
+        "cooking": "調理中",
+        "ready": "配膳可"
+    },
+    "loginTitle": "登録"
+}

@@ -1,0 +1,33 @@
+{
+    "dashboard": "ダッシュボード",
+    "logout": "ログアウト",
+    "viewDetail": "詳細を見る",
+    "recentOrders": "最新の注文",
+    "seeAll": "すべて見る",
+    "customer": "顧客",
+    "total": "合計",
+    "status": "ステータス",
+    "quickActions": "クイックアクション",
+    "menu": {
+        "dashboard": "ダッシュボード",
+        "orders": "注文管理",
+        "menuItems": "メニュー設定", 
+        "users": "スタッフ管理",
+        "settings": "システム設定"
+    },
+    "stats": {
+        "newOrders": "新規注文",
+        "revenue": "売上高",
+        "customers": "顧客数",
+        "activeTables": "稼働テーブル"
+    },
+    "statusLabel": {
+        "completed": "完了",
+        "pending": "保留中",
+        "processing": "処理中"
+    },
+    "actions": {
+        "addNewDish": "料理を追加",
+        "printReport": "レポート印刷"
+    }
+}

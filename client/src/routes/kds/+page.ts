@@ -1,10 +1,9 @@
 import { redirect } from '@sveltejs/kit';
 import { detectLanguage } from '$lib/infrastructure/i18n/config';
-import type { PageLoad } from './$types';
 
 export const ssr = false;
 
-export const load: PageLoad = () => {
+export const load = () => {
     const detectedLocale = detectLanguage();
-    throw redirect(307, `/${detectedLocale}/`);
+    throw redirect(307, `/${detectedLocale}/kds/`);
 };

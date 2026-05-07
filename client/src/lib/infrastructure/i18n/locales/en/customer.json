@@ -1,18 +1,4 @@
 {
-    "common": {
-        "appName": "Biwa Restaurant",
-        "actions": {
-            "add": "Add to Cart",
-            "order": "Place Order",
-            "cancel": "Cancel",
-            "login": "Login"
-        },
-        "languages": {
-            "zh": "Chinese",
-            "en": "English",
-            "ja": "Japanese"
-        }
-    },
     "menu": {
         "title": "Menu",
         "categories": {
@@ -36,18 +22,5 @@
         "confirm_desc": "Please confirm your items and amount. The kitchen will start preparing after submission.",
         "place_order": "Place Order",
         "view_cart": "View Cart"
-    },
-    "kds": {
-        "title": "Kitchen Display",
-        "status": {
-            "new": "New Orders",
-            "cooking": "Cooking",
-            "ready": "Ready"
-        }
-    },
-     "login": {
-        "description": "Please enter your account information to log in.",
-        "username": "Username / Email",
-        "password": "Password"
-  }
+    }
 }

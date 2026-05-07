@@ -1,0 +1,33 @@
+{
+    "dashboard": "Dashboard",
+    "logout": "Logout",
+    "viewDetail": "View Detail",
+    "recentOrders": "Recent Orders",
+    "seeAll": "See All",
+    "customer": "Customer",
+    "total": "Total",
+    "status": "Status",
+    "quickActions": "Quick Actions",
+    "menu": {
+        "dashboard": "Dashboard",
+        "orders": "Orders",
+        "menuItems": "Menu Items", 
+        "users": "Users",
+        "settings": "Settings"
+    },
+    "stats": {
+        "newOrders": "New Orders",
+        "revenue": "Revenue",
+        "customers": "Customers",
+        "activeTables": "Active Tables"
+    },
+    "statusLabel": {
+        "completed": "Done",
+        "pending": "Pending",
+        "processing": "Processing"
+    },
+    "actions": {
+        "addNewDish": "Add New Dish",
+        "printReport": "Print Report"
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "title": "Kitchen Display",
+    "status": {
+        "new": "New Orders",
+        "cooking": "Cooking",
+        "ready": "Ready"
+    },
+    "loginTitle": "Login"
+}
