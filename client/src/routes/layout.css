@@ -1,1 +1,36 @@
 @import 'tailwindcss';
+
+/* 1. 定义自定义字体 */
+/* 如果你的字体是自定义的，需要使用 @font-face 规则引入 */
+/* 例如，为中文引入 Noto Sans SC */
+@font-face {
+  font-family: 'Noto Sans SC';
+  src: url('/fonts/NotoSansSC-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap; /* 优化字体加载体验 */
+}
+
+/* 例如，为日文引入 Noto Sans JP */
+@font-face {
+  font-family: 'Noto Sans JP';
+  src: url('/fonts/NotoSansJP-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 2. 设置默认字体（例如英文或通用回退） */
+/* 这会作为所有语言的默认字体，或者在特定语言字体加载失败时的回退 */
+body {
+  font-family: 'Roboto', sans-serif; /* 假设 Roboto 是系统字体或已通过其他方式引入 */
+}
+
+/* 3. 根据 HTML 的 lang 属性应用语言特定字体 */
+html[lang="zh"] body {
+  font-family: 'Noto Sans SC', 'Roboto', sans-serif; /* 中文优先使用 Noto Sans SC */
+}
+
+html[lang="ja"] body {
+  font-family: 'Noto Sans JP', 'Roboto', sans-serif; /* 日文优先使用 Noto Sans JP */
+}

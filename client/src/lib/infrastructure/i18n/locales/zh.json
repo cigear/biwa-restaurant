@@ -4,13 +4,50 @@
         "actions": {
             "add": "加入购物车",
             "order": "下单",
-            "cancel": "取消"
+            "cancel": "取消",
+            "login": "登录"
+        },
+        "languages": {
+            "zh": "简体中文",
+            "en": "English",
+            "ja": "日本語"
         }
     },
+    "cart": {
+        "title": "购物车",
+        "empty": "购物车是空的",
+        "subtotal": "小计",
+        "total": "总计",
+        "checkout": "去结算",
+        "confirm_order": "确认订单",
+        "confirm_desc": "请确认您的餐品及金额，提交后后厨将开始制作。",
+        "place_order": "立即下单",
+        "view_cart": "查看购物车"
+    },
     "menu": {
+        "title": "菜单",
         "categories": {
             "drinks": "特色饮品",
             "foods": "美味主食"
+        },
+        "items": {
+            "latte": "拿铁",
+            "latte_desc": "细腻的奶泡与浓缩咖啡的完美融合。",
+            "burger": "招牌汉堡",
+            "burger_desc": "..."
+        },
+        "kds": {
+            "title": "厨房显示屏",
+            "status": {
+                "new": "新订单",
+                "cooking": "制作中",
+                "ready": "准备就绪"
+            }
         }
+    },
+    "login": {
+        "description": "请输入您的账号信息以登录。",
+        "username": "用户名 / 邮箱",
+        "password": "密码"
     }
 }

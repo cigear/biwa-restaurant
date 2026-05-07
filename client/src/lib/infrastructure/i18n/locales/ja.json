@@ -9,7 +9,13 @@
             "cancel": "キャンセル",
             "back": "戻る",
             "confirm": "確認",
-            "checkout": "お会計"
+            "checkout": "お会計",
+            "login": "ログイン"
+        },
+        "languages": {
+            "zh": "中国語",
+            "en": "English",
+            "ja": "日本語"
         },
         "status": {
             "loading": "読み込み中...",
@@ -29,14 +35,24 @@
         "options": {
             "selection": "選択してください",
             "required": "必須"
+        },
+        "items": {
+            "latte": "カフェラテ",
+            "latte_desc": "きめ細やかなミルクフォームとエスプレッソの完璧なハーモニー。",
+            "burger": "プレミアムバーガー",
+            "burger_desc": "..."
         }
     },
     "cart": {
-        "title": "ショッピングカート",
-        "total": "合計金額",
-        "quantity": "数量",
-        "itemsCount": "{count} 点のアイテム",
-        "empty": "カートは空です"
+        "title": "カート",
+        "empty": "カートは空です",
+        "subtotal": "小計",
+        "total": "合計",
+        "checkout": "お会計へ進む",
+        "confirm_order": "注文を確認",
+        "confirm_desc": "注文内容を確認してください。送信後、調理を開始します。",
+        "place_order": "注文を確定する",
+        "view_cart": "カートを見る"
     },
     "order": {
         "tableNumber": "テーブル番号",
@@ -49,5 +65,18 @@
             "completed": "完了",
             "cancelled": "キャンセル済み"
         }
+    },
+    "kds": {
+        "title": "キッチンディスプレイ",
+        "status": {
+            "new": "新規注文",
+            "cooking": "調理中",
+            "ready": "配膳可"
+        }
+    },
+    "login": {
+        "description": "ログインするためにアカウント情報を入力してください。",
+        "username": "ユーザー名 / メールアドレス",
+        "password": "パスワード"
     }
 }

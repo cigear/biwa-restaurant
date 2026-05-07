@@ -4,13 +4,50 @@
         "actions": {
             "add": "Add to Cart",
             "order": "Place Order",
-            "cancel": "Cancel"
+            "cancel": "Cancel",
+            "login": "Login"
+        },
+        "languages": {
+            "zh": "Chinese",
+            "en": "English",
+            "ja": "Japanese"
         }
     },
     "menu": {
+        "title": "Menu",
         "categories": {
             "drinks": "Drinks",
             "foods": "Main Dishes"
+        },
+        "items": {
+            "latte": "Latte",
+            "latte_desc": "The perfect harmony of milk foam and espresso.",
+            "burger": "Premium Burger",
+            "burger_desc": "..."
         }
-    }
+    },
+    "cart": {
+        "title": "Cart",
+        "empty": "Cart is empty",
+        "subtotal": "Subtotal",
+        "total": "Total",
+        "checkout": "Checkout",
+        "confirm_order": "Confirm Order",
+        "confirm_desc": "Please confirm your items and amount. The kitchen will start preparing after submission.",
+        "place_order": "Place Order",
+        "view_cart": "View Cart"
+    },
+    "kds": {
+        "title": "Kitchen Display",
+        "status": {
+            "new": "New Orders",
+            "cooking": "Cooking",
+            "ready": "Ready"
+        }
+    },
+     "login": {
+        "description": "Please enter your account information to log in.",
+        "username": "Username / Email",
+        "password": "Password"
+  }
 }

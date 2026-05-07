@@ -1,17 +1,17 @@
 <script lang="ts">
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
-	import '$infra/i18n/config'; // 必须引入以运行 init()
-    import { isLoading } from 'svelte-i18n';
 
 	let { children } = $props();
 </script>
 
-<svelte:head><link rel="icon" href={favicon} /></svelte:head>
-{#if $isLoading}
-    <div class="flex h-screen items-center justify-center">
-        <p>Loading...</p>
-    </div>
-{:else}
+<svelte:head>
+    <title>Biwa Restaurant</title>
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href={favicon} type="image/svg+xml" />
+</svelte:head>
+
+<!-- 根级容器，可以在这里设置全局字体 -->
+<div class="min-h-screen bg-white font-sans antialiased text-zinc-900">
     {@render children()}
-{/if}
+</div>
