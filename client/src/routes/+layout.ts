@@ -17,4 +17,3 @@ init({
     fallbackLocale: 'en',
     initialLocale: browser ? getLocaleFromPathname(new RegExp(window.location.pathname)) ?? 'en' : 'en',
 });
-
