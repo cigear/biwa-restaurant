@@ -9,8 +9,8 @@
 
     async function handleLogin(e: SubmitEvent) {
         e.preventDefault();
-        // TODO: 实际项目中这里需要调用登录 API 并保存 Auth Token
-        console.log('Login attempt:', username);
+        // 模拟登录逻辑：设置一个 session Cookie (有效期 1 天)
+        document.cookie = "session=true; path=/; max-age=" + 60 * 60 * 24;
         await goto(`${base}/${page.params.locale}/admin`);
     }
 </script>

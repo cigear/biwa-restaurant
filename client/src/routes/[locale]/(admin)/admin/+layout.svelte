@@ -31,7 +31,8 @@
     }
 
     async function handleLogout() {
-        // TODO: 这里应添加清除 Auth Token 或 Session 的逻辑
+        // 清除 Cookie：将其过期时间设为过去
+        document.cookie = "session=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
         isUserMenuOpen = false;
         await goto(`${base}/${page.params.locale}/admin/login`);
     }
@@ -118,6 +119,7 @@
                                 {#each supportedLocales as loc}
                                     <a 
                                         href={getSwitchLocaleUrl(loc)}
+                                        data-sveltekit-preload-data="off"
                                         class="block px-4 py-2 text-sm text-zinc-700 hover:bg-orange-50 hover:text-orange-700 transition-colors {page.params.locale === loc ? 'font-bold bg-zinc-50 text-orange-600' : ''}"
                                     >
                                         {loc === 'en' ? 'English' : loc === 'zh' ? '中文' : '日本語'}
