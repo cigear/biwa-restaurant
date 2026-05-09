@@ -4,7 +4,7 @@
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
-		"dev": "vite dev",
+		"dev": "vite dev --host",
 		"build": "vite build",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
@@ -15,7 +15,7 @@
 		"test:unit": "vitest",
 		"test": "npm run test:unit -- --run && npm run test:e2e",
 		"test:e2e": "playwright install && playwright test",
-		"mock": "json-server --watch db.json --port 3001"
+		"mock": "json-server --watch db.json --port 3001 --host 0.0.0.0"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^2.0.4",
@@ -51,6 +51,7 @@
 	},
 	"dependencies": {
 		"bits-ui": "^2.18.1",
+		"embla-carousel-svelte": "^8.6.0",
 		"lucide-svelte": "^1.0.1",
 		"svelte-i18n": "^4.0.1"
 	}

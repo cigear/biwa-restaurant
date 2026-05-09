@@ -1,6 +1,6 @@
 import type { MenuItem, Category } from '$domain/menu/models';
 
-const API_BASE = 'http://localhost:3001';
+const API_BASE = 'http://192.168.11.51:3001';
 
 export const menuRepository = {
     async getCategories(): Promise<Category[]> {

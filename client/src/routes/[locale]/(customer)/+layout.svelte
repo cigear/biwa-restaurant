@@ -1,13 +1,16 @@
 <script lang="ts">
 	import favicon from '$lib/assets/favicon.svg';
 	import { _ } from 'svelte-i18n';
-    import { Globe, User, Lock, Mail } from 'lucide-svelte';
+    import { Globe, User, Lock, Mail, Home, Utensils, ClipboardList } from 'lucide-svelte';
     import { Dialog } from 'bits-ui';
     import Button from '$pres/components/ui/Button.svelte';
     import { page } from '$app/stores';
     import { goto } from '$app/navigation';
 
 	let { children } = $props();
+
+    // 1. 定义类型安全的 locale 变量
+    const locale = $derived($page.params.locale as string);
 
     const languages = [
         { code: 'zh', name: 'zh' },
@@ -19,6 +22,14 @@
     let username = $state('');
     let password = $state('');
     let isSubmitting = $state(false);
+
+    // 根据当前路径判断激活状态，假设路径包含对应的关键字
+    const navItems = $derived([
+        { icon: Home, label: $_('common.nav.home') || '首页', path: '/home' },
+        { icon: Utensils, label: $_('common.nav.menu') || '点餐', path: '/menu' },
+        { icon: ClipboardList, label: $_('common.nav.orders') || '订单', path: '/orders' },
+        { icon: User, label: $_('common.nav.mine') || '我的', path: '/mine' }
+    ]);
 
     function handleLogin() {
         showLogin = true;
@@ -38,8 +49,8 @@
 
     function handleLanguageChange(event: Event) {
         const newLocale = (event.target as HTMLSelectElement).value;
-        // 获取当前路径并替换 locale 部分，例如 /zh/menu -> /en/menu
-        const newPath = $page.url.pathname.replace(`/${$page.params.locale}`, `/${newLocale}`);
+        // 2. 使用类型安全的变量进行替换
+        const newPath = $page.url.pathname.replace(`/${locale}`, `/${newLocale}`);
         goto(newPath);
     }
 </script>
@@ -49,9 +60,9 @@
     <link rel="icon" href={favicon} type="image/svg+xml" />
 </svelte:head>
 
-<div class="flex flex-col h-screen">
+<div class="flex flex-col h-screen overflow-hidden">
     <!-- ✅ 顶部导航栏 -->
-    <nav class="sticky top-0 z-[100] w-full bg-white/80 backdrop-blur-md border-b border-zinc-100 px-6 h-16 flex items-center justify-between">
+    <nav class="sticky top-0 z-100 w-full bg-white/80 backdrop-blur-md border-b border-zinc-100 px-6 h-16 flex items-center justify-between">
         <!-- Logo / 品牌名 -->
         <div class="flex items-center gap-2">
             <span class="text-xl font-black tracking-tighter text-orange-600">BIWA</span>
@@ -77,7 +88,7 @@
             <!-- 登录按钮 -->
            <Button
                 variant="ghost"
-                class="flex flex-row items-center justify-center gap-2 rounded-full px-4 h-10 !bg-orange-600 !text-white hover:!bg-orange-500"
+                class="flex flex-row items-center justify-center gap-2 rounded-full px-4 h-10 bg-orange-600! text-white! hover:bg-orange-500!"
                 onclick={handleLogin}
             >
                 <User class="w-4 h-4 shrink-0" />
@@ -89,16 +100,30 @@
     </nav>
 
     <!-- 页面内容 -->
-    <main class="flex-1 overflow-hidden">
+    <main class="flex-1 flex flex-col min-h-0 overflow-hidden bg-zinc-50 relative">
         {@render children()}
     </main>
+
+    <!-- 移动端底部导航 -->
+    <nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md flex justify-around py-2 z-40 border-t border-zinc-100">
+        {#each navItems as item}
+            {@const isActive = $page.url.pathname.includes(item.path) || (item.path === '/menu' && $page.url.pathname.endsWith('/'))} 
+            <a 
+                href={`/${locale}${item.path}`}
+                class="flex flex-col items-center {isActive ? 'text-orange-600' : 'text-zinc-500'} cursor-pointer p-1"
+            >
+                <item.icon size={22} strokeWidth={2.5} />
+                <span class="text-[10px]">{item.label}</span>
+            </a>
+        {/each}
+    </nav>
 </div>
 
 <!-- 登录弹窗 -->
 <Dialog.Root bind:open={showLogin}>
     <Dialog.Portal>
-        <Dialog.Overlay class="fixed inset-0 z-[200] bg-zinc-950/40 backdrop-blur-sm" />
-        <Dialog.Content class="fixed left-[50%] top-[50%] z-[201] w-full max-w-[400px] translate-x-[-50%] translate-y-[-50%] rounded-[2rem] bg-white p-8 shadow-2xl outline-none">
+        <Dialog.Overlay class="fixed inset-0 z-200 bg-zinc-950/40 backdrop-blur-sm" />
+        <Dialog.Content class="fixed left-[50%] top-[50%] z-201 w-full max-w-400px translate-x-[-50%] translate-y-[-50%] rounded-4xl] bg-white p-8 shadow-2xl outline-none">
             <Dialog.Title class="text-2xl font-black text-zinc-900 mb-2">
                 {$_('common.actions.login')}
             </Dialog.Title>
